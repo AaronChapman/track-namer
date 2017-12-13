@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>oylo's tool box - track namer</title>
+        
+        <meta charset="utf-8">
+        <meta name="description" content="oylo's tool box">
+
+        <link rel="stylesheet" href="../css/template.css">
+        <link rel="stylesheet" href="track-namer.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+
+    <body onload="setup()" id="page_body">
+        <div class="generated_track_names" id="generated_track_names">
+            <div class="content" id="content"></div>
+        </div><br>
+        <input class="option_button" id="auto_generate_button" type="button" value="generate track names" onclick="auto_generate()">
+    </body>
+    
+    <footer>
+        <div id="new_footer">
+            <script>
+                $("#new_footer").load("../resources/templates/footer.html");
+            </script>
+        </div>
+    </footer>
+
+    <script src="../../javascript/page_fade.js"></script>
+    
+    <script>
+        var track_names = document.getElementById('content');
+        var name_string = "";
+        var array = [];
+        var extras = ["the", "an", "a"];
+        var additional_chance = Math.floor(Math.random() * 100) + 1;
+        var auto_generate_on = false;
+    </script>
+    
+    <script src="track-namer.js"></script>
+</html>
+
+<!-- quite the explorer, aren't you? -- oylo.info 2017 -->
